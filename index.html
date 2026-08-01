@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Cipaa</title>
+<style>
+  :root {
+    --coklat: #A9744F;
+    --pink: #F5B8C4;
+    --coklat-soft: #D9B08C;
+    --bg: #FFF7F3;
+    --text: #4A3128;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: linear-gradient(90deg, var(--coklat), var(--pink));
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+  }
+  nav .logo { font-weight: bold; font-size: 1.3rem; color: white; }
+  nav ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
+  nav ul li a { color: white; text-decoration: none; font-size: 0.95rem; }
+  header#beranda {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--coklat-soft), var(--pink));
+    color: white;
+  }
+  header#beranda h1 { font-size: 2.2rem; margin-bottom: 10px; }
+  header#beranda p { font-size: 1.1rem; margin-bottom: 20px; }
+  .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: white;
+    color: var(--coklat);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+  h2 { text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: var(--coklat); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(169, 116, 79, 0.15);
+  }
+  .card .icon { font-size: 2rem; margin-bottom: 10px; }
+  .skill { margin-bottom: 20px; }
+  .skill-label { display: flex; justify-content: space-between; margin-bottom: 6px; font-weight: bold; }
+  .bar-bg { background: #eee; border-radius: 10px; overflow: hidden; height: 14px; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coklat), var(--pink)); border-radius: 10px; }
+  .kontak-list { display: flex; flex-direction: column; gap: 16px; align-items: center; }
+  .kontak-item { display: flex; align-items: center; gap: 12px; font-size: 1.05rem; }
+  footer {
+    text-align: center;
+    padding: 24px;
+    background: var(--coklat);
+    color: white;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🌸 WebKu</div>
+  <ul>
+    <li><a href="#beranda">Beranda</a></li>
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#skill">Skill</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<header id="beranda">
+  <h1>Halo! Saya Cipaa</h1>
+  <p>Selamat datang di website pertama saya! 🚀</p>
+  <p style="font-size:0.9rem; margin-bottom: 24px;">Website ini dibuat dengan HTML &amp; di-deploy ke Vercel</p>
+  <a href="#tentang" class="btn">Kenali Saya ↓</a>
+</header>
+
+<section id="tentang">
+  <h2>✨ Tentang Saya</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">👩‍🎓</div>
+      <h3>Siapa Saya?</h3>
+      <p>Saya Cipaa, seorang pelajar yang sedang belajar membuat website. Ini project pertama saya dan saya senang bisa mencobanya!</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h3>Tujuan Saya</h3>
+      <p>Saya ingin bisa membuat website sendiri dengan baik dan terus belajar mengembangkan kemampuan ini.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🍳</div>
+      <h3>Hobi Saya</h3>
+      <p>Memasak dan mencoba resep-resep baru di waktu luang.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skill" style="background:white;">
+  <h2>🛠️ Skill Saya</h2>
+  <div class="skill">
+    <div class="skill-label"><span>HTML</span><span>60%</span></div>
+    <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+  </div>
+  <div class="skill">
+    <div class="skill-label"><span>CSS</span><span>50%</span></div>
+    <div class="bar-bg"><div class="bar-fill" style="width:50%"></div></div>
+  </div>
+  <div class="skill">
+    <div class="skill-label"><span>JavaScript</span><span>30%</span></div>
+    <div class="bar-bg"><div class="bar-fill" style="width:30%"></div></div>
+  </div>
+  <p style="text-align:center; font-size:0.85rem; color:#888; margin-top:20px;">*Angka di atas contoh, silakan sesuaikan dengan kemampuanmu</p>
+</section>
+
+<section id="kontak">
+  <h2>📬 Hubungi Saya</h2>
+  <div class="kontak-list">
+    <div class="kontak-item">📧 <span>email@contoh.com</span></div>
+    <div class="kontak-item">📱 <span>0813-xxxx-xxxx</span></div>
+    <div class="kontak-item">📍 <span>Indonesia</span></div>
+  </div>
+</section>
+
+<footer>
+  Dibuat dengan ❤️ oleh Cipaa | 2026<br>
+  Powered by HTML &amp; Vercel
+</footer>
+
+</body>
+</html>
